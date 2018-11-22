@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Legal status</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 1</span>
+          Do they have British citizenship?
+      </h1>
+
+      <form class="form" action="/countryofbirth" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="citizenship-1" name="citizenship" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="citizenship-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="citizenship-2" name="citizenship" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="citizenship-2">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="citizenship-3" name="citizenship" type="radio" value="dont-know">
+                <label class="govuk-label govuk-radios__label" for="citizenship-3">
+                  Don't know
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

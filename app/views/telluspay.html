@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Legal status</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 2</span>
+          Would you like to tell us about any other rates of pay?
+      </h1>
+
+      <form class="form" action="/otherrates" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="tellpay-1" name="pay" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="tellpay-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="tellpay-2" name="pay" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="tellpay-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

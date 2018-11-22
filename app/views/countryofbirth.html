@@ -1,0 +1,296 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Legal status</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 1</span>
+          What is their country of birth?
+      </h1>
+
+      <form class="form" action="/recruitedfrom" method="post">
+
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Please select a country of birth</option>
+            <option value="published">Not known</option>
+            <option value="published">Afghanistan</option>
+            <option value="published">Aland Islands</option>
+            <option value="published">Albania</option>
+            <option value="published">Algeria</option>
+            <option value="published">American Samoa</option>
+            <option value="published">Andorra</option>
+            <option value="published">Angola</option>
+            <option value="published">Anguilla</option>
+            <option value="published">Antarctica</option>
+            <option value="published">Antigua and Barbuda</option>
+            <option value="published">Argentina</option>
+            <option value="published">Armenia</option>
+            <option value="published">Aruba</option>
+            <option value="published">Australia</option>
+            <option value="published">Austria</option>
+            <option value="published">Azerbaijan</option>
+            <option value="published">Bahamas</option>
+            <option value="published">Bahrain</option>
+            <option value="published">Bangladesh</option>
+            <option value="published">Barbados</option>
+            <option value="published">Belarus</option>
+            <option value="published">Belgium</option>
+            <option value="published">Belize</option>
+            <option value="published">Benin</option>
+            <option value="published">Bermuda</option>
+            <option value="published">Bhutan</option>
+            <option value="published">Bolivia</option>
+            <option value="published">Bosnia and Herzegovina</option>
+            <option value="published">Botswana</option>
+            <option value="published">Bouvet Island</option>
+            <option value="published">Brazil</option>
+            <option value="published">British Indian Ocean Territory</option>
+            <option value="published">Brunei Darussalam</option>
+            <option value="published">Bulgaria</option>
+            <option value="published">Burkina Faso</option>
+            <option value="published">Burundi</option>
+            <option value="published">Cambodia</option>
+            <option value="published">Cameroon</option>
+            <option value="published">Canada</option>
+            <option value="published">Cape Verde</option>
+            <option value="published">Cayman Islands</option>
+            <option value="published">Central African Republic</option>
+            <option value="published">Chad</option>
+            <option value="published">Chile</option>
+            <option value="published">China</option>
+            <option value="published">Christmas Island</option>
+            <option value="published">Cocos (Keeling) Islands</option>
+            <option value="published">Colombia</option>
+            <option value="published">Comoros</option>
+            <option value="published">Congo</option>
+            <option value="published">Congo Democratic Republic of the</option>
+            <option value="published">Cook Islands</option>
+            <option value="published">Costa Rica</option>
+            <option value="published">Cote d'Ivoire</option>
+            <option value="published">Croatia</option>
+            <option value="published">Cuba</option>
+            <option value="published">Cyprus</option>
+            <option value="published">Czech Republic</option>
+            <option value="published">Denmark</option>
+            <option value="published">Djibouti</option>
+            <option value="published">Dominica</option>
+            <option value="published">Dominican Republic</option>
+            <option value="published">Ecuador</option>
+            <option value="published">Egypt</option>
+            <option value="published">El Salvador</option>
+            <option value="published">Equatorial Guinea</option>
+            <option value="published">Eritrea</option>
+            <option value="published">Estonia</option>
+            <option value="published">Ethiopia</option>
+            <option value="published">Falkland Islands (Malvinas)</option>
+            <option value="published">Faroe Islands</option>
+            <option value="published">Fiji</option>
+            <option value="published">Finland</option>
+            <option value="published">France</option>
+            <option value="published">French Guiana</option>
+            <option value="published">French Polynesia</option>
+            <option value="published">French Southern Territories</option>
+            <option value="published">Gabon</option>
+            <option value="published">Gambia</option>
+            <option value="published">Georgia</option>
+            <option value="published">Germany</option>
+            <option value="published">Ghana</option>
+            <option value="published">Gibraltar</option>
+            <option value="published">Greece</option>
+            <option value="published">Greenland</option>
+            <option value="published">Grenada</option>
+            <option value="published">Guadeloupe</option>
+            <option value="published">Guam</option>
+            <option value="published">Guatemala</option>
+            <option value="published">Guernsey</option>
+            <option value="published">Guinea</option>
+            <option value="published">Guinea-Bissau</option>
+            <option value="published">Guyana</option>
+            <option value="published">Haiti</option>
+            <option value="published">Gibraltar</option>
+            <option value="published">Greece</option>
+            <option value="published">Greenland</option>
+            <option value="published">Grenada</option>
+            <option value="published">Guadeloupe</option>
+            <option value="published">Guam</option>
+            <option value="published">Guatemala</option>
+            <option value="published">Guernsey</option>
+            <option value="published">Guinea</option>
+            <option value="published">Guinea-Bissau</option>
+            <option value="published">Guyana</option>
+            <option value="published">Haiti</option>
+            <option value="published">Heard Island and McDonald Islands</option>
+            <option value="published">Holy See (Vatican City State)</option>
+            <option value="published">Honduras</option>
+            <option value="published">Hong Kong</option>
+            <option value="published">Hungary</option>
+            <option value="published">Iceland</option>
+            <option value="published">India</option>
+            <option value="published">Indonesia</option>
+            <option value="published">Iran Islamic Republic of</option>
+            <option value="published">Iraq</option>
+            <option value="published">Ireland</option>
+            <option value="published">Israel</option>
+            <option value="published">Italy</option>
+            <option value="published">Jamaica</option>
+            <option value="published">Japan</option>
+            <option value="published">Jersey</option>
+            <option value="published">Jordan</option>
+            <option value="published">Kazakhstan</option>
+            <option value="published">Kenya</option>
+            <option value="published">Kiribati</option>
+            <option value="published">Korea Democratic People's Republic of</option>
+            <option value="published">Korea Republic of</option>
+            <option value="published">Kuwait</option>
+            <option value="published">Kyrgyzstan</option>
+            <option value="published">Latvia</option>
+            <option value="published">Lebanon</option>
+            <option value="published">Lesotho</option>
+            <option value="published">Liberia</option>
+            <option value="published">Libyan Arab Jamahiriya</option>
+            <option value="published">Liechtenstein</option>
+            <option value="published">Lithuania</option>
+            <option value="published">Luxembourg</option>
+            <option value="published">Macao</option>
+            <option value="published">Macedonia the former Yugoslav Republic of</option>
+            <option value="published">Madagascar</option>
+            <option value="published">Malawi</option>
+            <option value="published">Malaysia</option>
+            <option value="published">Maldives</option>
+            <option value="published">Mali</option>
+            <option value="published">Malta</option>
+            <option value="published">Marshall Islands</option>
+            <option value="published">Martinique</option>
+            <option value="published">Mauritania</option>
+            <option value="published">Mauritius</option>
+            <option value="published">Mayotte</option>
+            <option value="published">Mexico</option>
+            <option value="published">Micronesia Federated States of</option>
+            <option value="published">Moldova</option>
+            <option value="published">Monaco</option>
+            <option value="published">Mongolia</option>
+            <option value="published">Montenegro</option>
+            <option value="published">Montserrat</option>
+            <option value="published">Morocco</option>
+            <option value="published">Mozambique</option>
+            <option value="published">Myanmar</option>
+            <option value="published">Namibia</option>
+            <option value="published">Nauru</option>
+            <option value="published">Nepal</option>
+            <option value="published">Netherlands</option>
+            <option value="published">Netherlands Antilles</option>
+            <option value="published">New Caledonia</option>
+            <option value="published">New Zealand</option>
+            <option value="published">Nicaragua</option>
+            <option value="published">Niger</option>
+            <option value="published">Nigeria</option>
+            <option value="published">Niue</option>
+            <option value="published">Norfolk Island</option>
+            <option value="published">Northern Mariana Islands</option>
+            <option value="published">Norway</option>
+            <option value="published">Oman</option>
+            <option value="published">Pakistan</option>
+            <option value="published">Palau</option>
+            <option value="published">Palestinian Territory Occupied</option>
+            <option value="published">Panama</option>
+            <option value="published">Papua New Guinea</option>
+            <option value="published">Paraguay</option>
+            <option value="published">Peru</option>
+            <option value="published">Philippines</option>
+            <option value="published">Pitcairn</option>
+            <option value="published">Poland</option>
+            <option value="published">Portugal</option>
+            <option value="published">Puerto Rico</option>
+            <option value="published">Qatar</option>
+            <option value="published">Reunion</option>
+            <option value="published">Romania</option>
+            <option value="published">Russian Federation</option>
+            <option value="published">Rwanda</option>
+            <option value="published">Saint Barthelemy</option>
+            <option value="published">Saint Helena</option>
+            <option value="published">Saint Kitts and Nevis</option>
+            <option value="published">Saint Lucia</option>
+            <option value="published">Saint Martin (French part)</option>
+            <option value="published">Saint Pierre and Miquelon</option>
+            <option value="published">Saint Vincent and the Grenadines</option>
+            <option value="published">Samoa</option>
+            <option value="published">San Marino</option>
+            <option value="published">Sao Tome and Principe</option>
+            <option value="published">Saudi Arabia</option>
+            <option value="published">Senegal</option>
+            <option value="published">Serbia</option>
+            <option value="published">Seychelles</option>
+            <option value="published">Sierra Leone</option>
+            <option value="published">Singapore</option>
+            <option value="published">Slovakia</option>
+            <option value="published">Slovenia</option>
+            <option value="published">Solomon Islands</option>
+            <option value="published">Somalia</option>
+            <option value="published">South Africa</option>
+            <option value="published">South Georgia and the South Sandwich Islands</option>
+            <option value="published">South Sudan</option>
+            <option value="published">Spain</option>
+            <option value="published">Sri Lanka</option>
+            <option value="published">Sudan</option>
+            <option value="published">Suriname</option>
+            <option value="published">Svalbard and Jan Mayen</option>
+            <option value="published">Swaziland</option>
+            <option value="published">Sweden</option>
+            <option value="published">Switzerland</option>
+            <option value="published">Syrian Arab Republic</option>
+            <option value="published">Taiwan Province of China</option>
+            <option value="published">Tajikistan</option>
+            <option value="published">Tanzania United Republic of</option>
+            <option value="published">Thailand</option>
+            <option value="published">Timor-Leste</option>
+            <option value="published">Togo</option>
+            <option value="published">Tokelau</option>
+            <option value="published">Tonga</option>
+            <option value="published">Trinidad and Tobago</option>
+            <option value="published">Tunisia</option>
+            <option value="published">Turkey</option>
+            <option value="published">Turkmenistan</option>
+            <option value="published">Turks and Caicos Islands</option>
+            <option value="published">Tuvalu</option>
+            <option value="published">Uganda</option>
+            <option value="published">Ukraine</option>
+            <option value="published">United Arab Emirates</option>
+            <option value="published">United Kingdom</option>
+            <option value="published">United States</option>
+            <option value="published">United States Minor Outlying Islands</option>
+            <option value="published">Uruguay</option>
+            <option value="published">Uzbekistan</option>
+            <option value="published">Vanuatu</option>
+            <option value="published">Venezuela</option>
+            <option value="published">Viet Nam</option>
+            <option value="published">Virgin Islands British</option>
+            <option value="published">Virgin Islands U.S.</option>
+            <option value="published">Wallis and Futuna</option>
+            <option value="published">Western Sahara</option>
+            <option value="published">Yemen</option>
+            <option value="published">Zambia</option>
+            <option value="published">Zimbabwe</option>
+          </select>
+        </div>
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Legal status</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 1</span>
+        What is their ethnicity?
+      </h1>
+
+      <form class="form" action="/nationality" method="post">
+
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="ethnicity" name="ethnicity">
+            <option value="ethnicity1" selected>Select ethnicity that applies</option>
+            <option value="ethnicity2">English/Welsh/Scottish/Northern Irish/British</option>
+            <option value="ethnicity3">Irish</option>
+            <option value="ethnicity4">Gypsy or Irish Traveller</option>
+            <option value="ethnicity5">Any other white background</option>
+            <option value="ethnicity6">White and black Caribbean</option>
+            <option value="ethnicity7">White and black African</option>
+            <option value="ethnicity8">White and Asian</option>
+            <option value="ethnicity9">Any other mixed/multiple ethnic background</option>
+            <option value="ethnicity10">Indian</option>
+            <option value="ethnicity11">Pakistani</option>
+            <option value="ethnicity12">Bangladeshi</option>
+            <option value="ethnicity13">Chinese</option>
+            <option value="ethnicity14">Any other Asian background</option>
+            <option value="ethnicity15">African</option>
+            <option value="ethnicity16">Caribbean</option>
+            <option value="ethnicity17">Any other Black/African/Carribean background</option>
+            <option value="ethnicity18">Arab</option>
+            <option value="ethnicity19">Any other ethnic group</option>
+            <option value="ethnicity20">Not known</option>
+          </select>
+        </div>
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

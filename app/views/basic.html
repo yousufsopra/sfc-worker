@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Basic details</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 1</span>
+        Enter worker's basic details
+      </h1>
+
+      <form class="form" action="jobstart" method="post">
+
+        <div class="govuk-form-group">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="national-insurance-number">
+              What is their name or ID number?
+            </label>
+            <span id="national-insurance-number-hint" class="govuk-hint">
+              This is for your reference only. We will not share it with anyone else
+            </span>
+            <input class="govuk-input govuk-input--width-20" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              What is their main job role
+            </label>
+            <select class="govuk-select" id="jobrole" name="jobrole">
+              <option value="job1" selected>Select job role that applies</option>
+              <option value="job1">Senior care worker</option>
+              <option value="job2">Care worker</option>
+              <option value="job3">Community support and outreach worker</option>
+              <option value="job4">Advice guidance and advocacy</option>
+              <option value="job1">Other care providing role</option>
+              <option value="job2">Senior management</option>
+              <option value="job3">Middle management</option>
+              <option value="job4">First line manager</option>
+              <option value="job1">Registered manager</option>
+              <option value="job2">Supervisor</option>
+              <option value="job3">Managers and staff in care related but not care providing roles</option>
+              <option value="job4">Social worker</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                <h1 class="govuk-fieldset__heading">
+                  What type of contract do they have?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="permanent" name="list" type="radio" value="permanent">
+                  <label class="govuk-label govuk-radios__label" for="permanent">
+                    Permanent
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="temporary" name="list" type="radio" value="temporary">
+                  <label class="govuk-label govuk-radios__label" for="temporary">
+                    Temporary
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="pool-bank" name="list" type="radio" value="pool-bank">
+                  <label class="govuk-label govuk-radios__label" for="pool-bank">
+                    Pool/Bank
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="agency" name="list" type="radio" value="agency">
+                  <label class="govuk-label govuk-radios__label" for="agency">
+                    Agency
+                  </label>
+                </div>
+                <div class="govuk-radios govuk-radios--conditional">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="list" type="radio" value="other" data-aria-controls="conditional-other">
+                    <label class="govuk-label govuk-radios__label" for="other">
+                      Other
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="othertext">
+                        Other contract type
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text">
+                    </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <button class="govuk-button">Save & Continue</button>
+
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

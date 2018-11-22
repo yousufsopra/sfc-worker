@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Task list
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        [Employee name]'s data set
+      </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Identity
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="basic">
+                Basic details
+              </a>
+              <p class="app-task-list__task-completed" id="eligibility-completed">Last updated yesterday</p>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="jobstart">
+                Job start
+              </a>
+              <p class="app-task-list__task-completed" id="read-declaration-completed">Last updated yesterday</p>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="gender">
+                Gender
+              </a>
+              <p class="app-task-list__task-completed" id="read-declaration-completed">Last updated 10/12/2017</p>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="disability">
+                Disability
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="ethnicity">
+                Ethnicity
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="nationality">
+                Legal status
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Employment
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="recruitedfrom" aria-describedby="company-information-completed">
+                Basic worker history
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="sickness" aria-describedby="contact-details-completed">
+                Sickness
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="contractedworkinghours">
+                Contracted hours
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="howpaid">
+                Pay
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Qualifications
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="holdscqual">
+                Social care qualifications
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="holdotherqual">
+                Non-social care qualifications
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+
+{% endblock %}

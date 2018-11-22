@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Edit pay rate</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 2</span>
+        Edit pay rate
+      </h1>
+
+      <form class="form" action="otherratescontent" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="pay-type">
+            Pay type
+          </label>
+          <span id="pay-type-hint" class="govuk-hint">
+            e.g. Weekend rate
+          </span>
+          <input class="govuk-input govuk-input--width-20" id="pay-type" name="add-rate" type="text" aria-describedby="pay-type-hint" value="Bank holiday">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="hourly-rate">
+            Hourly rate?
+          </label>
+          <span id="hourly-rate-hint" class="govuk-hint">
+            For example 10.40
+          </span>
+          <div class="input-wrapper">
+            <span class="govuk-input input-prefix" aria-hidden="true">£</span>
+            <input class="govuk-input govuk-input--width-5" id="hourly-rate" name="hourly-rate" type="text" aria-describedby="hourly-rate-hint" value="8.90">
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="days-worked">
+            Days worked in last 7 days
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="days-worked" name="add-rate" type="text" value="1">
+        </div>
+
+        <button class="govuk-button">Save & Return</button>
+
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

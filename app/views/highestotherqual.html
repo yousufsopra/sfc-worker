@@ -1,0 +1,137 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Highest social care qualification</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 3</span>
+          What is the highest level of their non-social care qualification?
+      </h1>
+
+      <form class="form" action="/recruitedfrom" method="post">
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with qualification levels
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            You can find more about what <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels">qualification levels mean</a>
+          </div>
+        </details>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="entry-level" name="scqual" type="radio" value="entry-level">
+                <label class="govuk-label govuk-radios__label" for="entry-level">
+                  Entry level
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-1" name="scqual" type="radio" value="level-1">
+                <label class="govuk-label govuk-radios__label" for="level-1">
+                  Level 1
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-2" name="scqual" type="radio" value="level-2">
+                <label class="govuk-label govuk-radios__label" for="level-2">
+                  Level 2
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-3" name="scqual" type="radio" value="level-3">
+                <label class="govuk-label govuk-radios__label" for="level-3">
+                  Level 3
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-4" name="scqual" type="radio" value="level-4">
+                <label class="govuk-label govuk-radios__label" for="level-4">
+                  Level 4
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-5" name="scqual" type="radio" value="level-5">
+                <label class="govuk-label govuk-radios__label" for="level-5">
+                  Level 5
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-6" name="scqual" type="radio" value="level-6">
+                <label class="govuk-label govuk-radios__label" for="level-6">
+                  Level 6
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-7" name="scqual" type="radio" value="level-7">
+                <label class="govuk-label govuk-radios__label" for="level-7">
+                  Level 7
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="level-8" name="scqual" type="radio" value="level-8">
+                <label class="govuk-label govuk-radios__label" for="level-8">
+                  Level 8 or above
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="dont-know" name="scqual" type="radio" value="dont-know">
+                <label class="govuk-label govuk-radios__label" for="dont-know">
+                  Don't know
+                </label>
+              </div>
+
+            </div><!--END GOVUK RADIOS-->
+          </fieldset>
+        </div><!--END GOVUK FORMGROUP-->
+
+        <!-- <div class="govuk-form-group">
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Please select highest level</option>
+            <option value="entry-level">Entry level</option>
+            <option value="level-1">Level 1</option>
+            <option value="level-2">Level 2</option>
+            <option value="level-3">Level 3</option>
+            <option value="level-4">Level 4</option>
+            <option value="level-5">Level 5</option>
+            <option value="level-6">Level 6</option>
+            <option value="level-7">Level 7</option>
+            <option value="level-8">Level 8 or above</option>
+            <option value="not-known">Not known</option>
+          </select>
+        </div> -->
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

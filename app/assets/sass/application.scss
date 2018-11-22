@@ -1,0 +1,28 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
+
+// Patterns that aren't in Frontend
+@import "patterns/check-your-answers";
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.app-task-list__task-name { width: 60%; }
+.app-task-list__task-completed { width: 40%; text-align: right;}
+.input-prefix {     background-color: #f3f2f1;
+    white-space: nowrap;
+    cursor: default;
+    flex: 0;
+    padding: 6px;
+  border-right: 0;}
+.input-wrapper { display: flex; }
+
+.govuk-button {background-color: #00823b; box-shadow: 0 2px 0 #003618; }
+  .govuk-button:hover, .govuk-button:active { background-color: #003618; }

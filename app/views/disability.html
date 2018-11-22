@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Disability</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 1</span>
+        Do they identify as having a disability?
+      </h1>
+
+      <form class="form" action="/ethnicity" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="permanent" name="disability" type="radio" value="permanent">
+                <label class="govuk-label govuk-radios__label" for="permanent">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="temporary" name="disability" type="radio" value="temporary">
+                <label class="govuk-label govuk-radios__label" for="temporary">
+                  No
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pool-bank" name="disability" type="radio" value="pool-bank">
+                <label class="govuk-label govuk-radios__label" for="pool-bank">
+                  Undisclosed
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="agency" name="disability" type="radio" value="agency">
+                <label class="govuk-label govuk-radios__label" for="agency">
+                  Don't know
+                </label>
+              </div>
+
+            </div><!--END GOVUK RADIOS-->
+          </fieldset>
+        </div><!--END GOVUK FORMGROUP-->
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,104 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Basic worker history</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 2</span>
+          Where were they recruited from?
+      </h1>
+
+      <form class="form" action="/socialcaredate" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-1" name="recruitment" type="radio" value="local-authority">
+                <label class="govuk-label govuk-radios__label" for="recruitment-1">
+                  Adult care sector: local authority
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-2" name="recruitment" type="radio" value="private-sector">
+                <label class="govuk-label govuk-radios__label" for="recruitment-2">
+                  Adult care sector: private or voluntary sector
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-3" name="recruitment" type="radio" value="health-sector">
+                <label class="govuk-label govuk-radios__label" for="recruitment-3">
+                  Health sector
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-4" name="recruitment" type="radio" value="young-social-care">
+                <label class="govuk-label govuk-radios__label" for="recruitment-4">
+                  Childrens / young people's social care
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-5" name="recruitment" type="radio" value="other-sector">
+                <label class="govuk-label govuk-radios__label" for="recruitment-5">
+                  Other sector
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-6" name="recruitment" type="radio" value="internal-development">
+                <label class="govuk-label govuk-radios__label" for="recruitment-6">
+                  Internal promotion or transfer or career development
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-7" name="recruitment" type="radio" value="not-previously-employed">
+                <label class="govuk-label govuk-radios__label" for="recruitment-7">
+                  Not previously employed
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-8" name="recruitment" type="radio" value="agency">
+                <label class="govuk-label govuk-radios__label" for="recruitment-8">
+                  Agency
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-9" name="recruitment" type="radio" value="first-role">
+                <label class="govuk-label govuk-radios__label" for="recruitment-9">
+                  First role after education
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-10" name="recruitment" type="radio" value="dont-know">
+                <label class="govuk-label govuk-radios__label" for="recruitment-10">
+                  Don't know
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="recruitment-11" name="recruitment" type="radio" value="other-sources">
+                <label class="govuk-label govuk-radios__label" for="recruitment-11">
+                  Other sources
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

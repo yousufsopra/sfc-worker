@@ -1,0 +1,95 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Legal status</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 2</span>
+          How is the worker paid?
+      </h1>
+
+      <form class="form" action="/telluspay" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="radios">
+
+              <div class="govuk-radios govuk-radios--conditional">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="pay-1" name="pay" type="radio" value="hourly" data-aria-controls="conditional-hourly">
+                  <label class="govuk-label govuk-radios__label" for="pay-1">
+                    Hourly
+                  </label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hourly">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="hourly-rate">
+                      Standard hourly rate?
+                    </label>
+                    <span id="hourly-rate-hint" class="govuk-hint">
+                      For example 10.40
+                    </span>
+                    <div class="input-wrapper">
+                      <span class="govuk-input input-prefix" aria-hidden="true">£</span>
+                      <input class="govuk-input govuk-input--width-5" id="hourly-rate" name="hourly-rate" type="text" aria-describedby="hourly-rate-hint">
+                    </div>
+                  </div>
+                </div>
+              </div><!--END CONDITIONAL-->
+
+              <div class="govuk-radios govuk-radios--conditional">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="pay-2" name="pay" type="radio" value="annually" data-aria-controls="conditional-annual">
+                  <label class="govuk-label govuk-radios__label" for="pay-2">
+                    Annually
+                  </label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-annual">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="annual-rate">
+                      Standard annual rate?
+                    </label>
+                    <span id="annual-rate-hint" class="govuk-hint">
+                      For example 20000
+                    </span>
+                    <div class="input-wrapper">
+                      <span class="govuk-input input-prefix" aria-hidden="true">£</span>
+                      <input class="govuk-input govuk-input--width-5" id="annual-rate" name="annual-rate" type="text" aria-describedby="annual-rate-hint">
+                    </div>
+                  </div>
+                </div>
+              </div><!--END CONDITIONAL-->
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pay-3" name="pay" type="radio" value="dont-know">
+                <label class="govuk-label govuk-radios__label" for="pay-3">
+                  Don't know
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

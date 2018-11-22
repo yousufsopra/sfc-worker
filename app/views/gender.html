@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">Employee name</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Gender</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Section 1</span>
+        What is their gender identity?
+      </h1>
+
+      <form class="form" action="/disability" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="permanent" name="list" type="radio" value="permanent">
+                <label class="govuk-label govuk-radios__label" for="permanent">
+                  Female
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="temporary" name="list" type="radio" value="temporary">
+                <label class="govuk-label govuk-radios__label" for="temporary">
+                  Male
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pool-bank" name="list" type="radio" value="pool-bank">
+                <label class="govuk-label govuk-radios__label" for="pool-bank">
+                  Don't know
+                </label>
+              </div>
+              <div class="govuk-radios govuk-radios--conditional">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other" name="list" type="radio" value="other" data-aria-controls="conditional-other">
+                  <label class="govuk-label govuk-radios__label" for="other">
+                    Other
+                  </label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="othertext">
+                      Gender identity
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text">
+                  </div>
+              </div>
+            </div>
+          </fieldset>
+        </div><!--END GOVUK FORMGROUP-->
+        <button class="govuk-button">Save & Continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}
