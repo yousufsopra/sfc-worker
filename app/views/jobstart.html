@@ -22,21 +22,21 @@
         Do you know when they started this job role?
       </h1>
 
-      <form class="form" action="/jobdate" method="post">
+      <form class="form" id="jobdate" action="/jobdate" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios">
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="permanent" name="genderlist" type="radio" value="permanent">
+                <input class="govuk-radios__input" id="permanent" name="genderlist" type="radio" value="jobdate">
                 <label class="govuk-label govuk-radios__label" for="permanent">
                   Yes
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="pool-bank" name="genderlist" type="radio" value="pool-bank">
+                <input class="govuk-radios__input" id="pool-bank" name="genderlist" type="radio" value="gender">
                 <label class="govuk-label govuk-radios__label" for="pool-bank">
                   No
                 </label>
@@ -45,10 +45,30 @@
             </div><!--END GOVUK RADIOS-->
           </fieldset>
         </div><!--END GOVUK FORMGROUP-->
-        <button class="govuk-button">Save & Continue</button>
+        <button id="submitButton" type="button" class="govuk-button">Save & Continue</button>
       </form>
       <!-- END OF YOUR CONTENT -->
     </div>
 </div>
+
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#jobdate input[name='genderlist']:checked").val();
+
+    if (type) {
+        $('#jobdate').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
 
 {% endblock %}

@@ -22,21 +22,21 @@
         Do they have a contract with zero hours?
       </h1>
 
-      <form class="form" action="/avgworkinghours" method="post">
+      <form class="form" id="zeroform" action="/avgworkinghours" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios">
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="zerohours-1" name="zerohours" type="radio" value="yes">
+                <input class="govuk-radios__input" id="zerohours-1" name="zerohours" type="radio" value="avgworkinghours">
                 <label class="govuk-label govuk-radios__label" for="zerohours-1">
                   Yes
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="zerohours-2" name="zerohours" type="radio" value="no">
+                <input class="govuk-radios__input" id="zerohours-2" name="zerohours" type="radio" value="contractedworkinghours">
                 <label class="govuk-label govuk-radios__label" for="zerohours-2">
                   No
                 </label>
@@ -45,10 +45,30 @@
             </div><!--END GOVUK RADIOS-->
           </fieldset>
         </div><!--END GOVUK FORMGROUP-->
-        <button class="govuk-button">Save & Continue</button>
+        <button id="submitButton" class="govuk-button">Save & Continue</button>
       </form>
       <!-- END OF YOUR CONTENT -->
     </div>
 </div>
+
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#zeroform input[name='zerohours']:checked").val();
+
+    if (type) {
+        $('#zeroform').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
 
 {% endblock %}

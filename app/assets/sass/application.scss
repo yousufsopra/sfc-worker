@@ -25,4 +25,4 @@ $govuk-global-styles: true;
 .input-wrapper { display: flex; }
 
 .govuk-button {background-color: #00823b; box-shadow: 0 2px 0 #003618; }
-  .govuk-button:hover, .govuk-button:active { background-color: #003618; }
+  .govuk-button:hover, .govuk-button:active, .govuk-button:focus { background-color: #003618; } 

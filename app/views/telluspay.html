@@ -22,19 +22,19 @@
           Would you like to tell us about any other rates of pay?
       </h1>
 
-      <form class="form" action="/otherrates" method="post">
+      <form id="tellpayform" class="form" action="/otherrates" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="tellpay-1" name="pay" type="radio" value="yes">
+                <input class="govuk-radios__input" id="tellpay-1" name="pay" type="radio" value="otherrates">
                 <label class="govuk-label govuk-radios__label" for="tellpay-1">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="tellpay-2" name="pay" type="radio" value="no">
+                <input class="govuk-radios__input" id="tellpay-2" name="pay" type="radio" value="carecertcomplete">
                 <label class="govuk-label govuk-radios__label" for="tellpay-2">
                   No
                 </label>
@@ -42,10 +42,30 @@
             </div>
           </fieldset>
         </div>
-        <button class="govuk-button">Save & Continue</button>
+        <button id="submitButton" class="govuk-button">Save & Continue</button>
       </form>
       <!-- END OF YOUR CONTENT -->
     </div>
 </div>
+
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#tellpayform input[name='pay']:checked").val();
+
+    if (type) {
+        $('#tellpayform').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
 
 {% endblock %}

@@ -22,7 +22,7 @@
           What is their nationality?
       </h1>
 
-      <form class="form" action="/citizenship" method="post">
+      <form class="form" id="nationality" action="/citizenship" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios" data-module="radios">
@@ -87,5 +87,25 @@
       <!-- END OF YOUR CONTENT -->
     </div>
 </div>
+
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#jobdate input[name='genderlist']:checked").val();
+
+    if (type) {
+        $('#jobdate').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
 
 {% endblock %}

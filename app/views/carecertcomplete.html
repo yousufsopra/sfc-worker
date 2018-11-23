@@ -22,36 +22,36 @@
         Have they started or completed the Care Certificate?
       </h1>
 
-      <form class="form" action="/ethnicity" method="post">
+      <form id="carecertcompform" class="form" action="/ethnicity" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios">
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="permanent" name="disability" type="radio" value="permanent">
-                <label class="govuk-label govuk-radios__label" for="permanent">
+                <input class="govuk-radios__input" id="yes" name="carecertcomp" type="radio" value="carecertdate">
+                <label class="govuk-label govuk-radios__label" for="yes">
                   Yes
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="temporary" name="disability" type="radio" value="temporary">
-                <label class="govuk-label govuk-radios__label" for="temporary">
+                <input class="govuk-radios__input" id="no" name="carecertcomp" type="radio" value="apprenticeship">
+                <label class="govuk-label govuk-radios__label" for="no">
                   No
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="temporary" name="disability" type="radio" value="temporary">
-                <label class="govuk-label govuk-radios__label" for="temporary">
+                <input class="govuk-radios__input" id="in-progress" name="carecertcomp" type="radio" value="apprenticeship">
+                <label class="govuk-label govuk-radios__label" for="in-progress">
                   In progress or partially completed
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="agency" name="disability" type="radio" value="agency">
-                <label class="govuk-label govuk-radios__label" for="agency">
+                <input class="govuk-radios__input" id="dont-know" name="carecertcomp" type="radio" value="apprenticeship">
+                <label class="govuk-label govuk-radios__label" for="dont-know">
                   Don't know
                 </label>
               </div>
@@ -59,10 +59,29 @@
             </div><!--END GOVUK RADIOS-->
           </fieldset>
         </div><!--END GOVUK FORMGROUP-->
-        <button class="govuk-button">Save & Continue</button>
+        <button id="submitButton" class="govuk-button">Save & Continue</button>
       </form>
       <!-- END OF YOUR CONTENT -->
     </div>
 </div>
 
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#carecertcompform input[name='carecertcomp']:checked").val();
+
+    if (type) {
+        $('#carecertcompform').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
 {% endblock %}

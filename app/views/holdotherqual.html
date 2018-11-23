@@ -22,28 +22,28 @@
         Do they hold any other qualifications?
       </h1>
 
-      <form class="form" action="/ethnicity" method="post">
+      <form id="holdotherqualform" class="form" action="/ethnicity" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios">
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="yes" name="otherqual" type="radio" value="yes">
+                <input class="govuk-radios__input" id="yes" name="holdotherqual" type="radio" value="highestotherqual">
                 <label class="govuk-label govuk-radios__label" for="yes">
                   Yes
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="no" name="otherqual" type="radio" value="no">
+                <input class="govuk-radios__input" id="no" name="holdotherqual" type="radio" value="index">
                 <label class="govuk-label govuk-radios__label" for="no">
                   No
                 </label>
               </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="dont-know" name="otherqual" type="radio" value="dont-know">
+                <input class="govuk-radios__input" id="dont-know" name="holdotherqual" type="radio" value="index">
                 <label class="govuk-label govuk-radios__label" for="dont-know">
                   Don't know
                 </label>
@@ -52,10 +52,29 @@
             </div><!--END GOVUK RADIOS-->
           </fieldset>
         </div><!--END GOVUK FORMGROUP-->
-        <button class="govuk-button">Save & Continue</button>
+        <button id="submitButton" class="govuk-button">Save & Continue</button>
       </form>
       <!-- END OF YOUR CONTENT -->
     </div>
 </div>
 
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#holdotherqualform input[name='holdotherqual']:checked").val();
+
+    if (type) {
+        $('#holdotherqualform').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
 {% endblock %}
