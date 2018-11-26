@@ -33,9 +33,9 @@
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">Bank holiday</td>
-            <td class="govuk-table__cell">£8.90</td>
-            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">{{ data['pay-type'] }}</td>
+            <td class="govuk-table__cell">£{{ data['hourly-rate'] }}</td>
+            <td class="govuk-table__cell">{{ data['hours-worked'] }}</td>
             <td class="govuk-table__cell"><a href="editrate" class="govuk-link">Change</a></td>
           </tr>
         </tbody>

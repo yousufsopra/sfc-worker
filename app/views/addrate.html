@@ -30,7 +30,7 @@
           <span id="pay-type-hint" class="govuk-hint">
             e.g. Weekend rate
           </span>
-          <input class="govuk-input govuk-input--width-20" id="pay-type" name="add-rate" type="text" aria-describedby="pay-type-hint">
+          <input class="govuk-input govuk-input--width-20" id="pay-type" name="pay-type" type="text" aria-describedby="pay-type-hint" value="{{ data['pay-type'] }}">
         </div>
 
         <div class="govuk-form-group">
@@ -42,7 +42,7 @@
           </span>
           <div class="input-wrapper">
             <span class="govuk-input input-prefix" aria-hidden="true">£</span>
-            <input class="govuk-input govuk-input--width-5" id="hourly-rate" name="hourly-rate" type="text" aria-describedby="hourly-rate-hint">
+            <input class="govuk-input govuk-input--width-5" id="hourly-rate" name="hourly-rate" type="text" aria-describedby="hourly-rate-hint" value="{{ data['hourly-rate'] }}">
           </div>
         </div>
 
@@ -50,7 +50,7 @@
           <label class="govuk-label" for="days-worked">
             Hours worked in last 7 days
           </label>
-          <input class="govuk-input govuk-input--width-5" id="days-worked" name="add-rate" type="text">
+          <input class="govuk-input govuk-input--width-5" id="hours-worked" name="hours-worked" type="text" value="{{ data['hours-worked'] }}">
         </div>
 
         <button class="govuk-button">Save and continue</button>
