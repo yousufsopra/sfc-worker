@@ -14,21 +14,21 @@
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="index">{{ data['recordname'] }}</a>
           </li>
-          <li class="govuk-breadcrumbs__list-item" aria-current="page">National Insurance number</li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Arrival in the UK</li>
         </ol>
       </div>
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-xl">Identity</span>
-        What is their National Insurance number?
+        What year did they arrive in the UK?
       </h1>
 
-      <form class="form" action="/dob" method="post">
+      <form class="form" action="/postcode" method="post">
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="name">
-            National Insurance number
+            Year of arrival
           </label>
-          <input class="govuk-input govuk-input--width-10" id="name" name="name" type="text">
+          <input class="govuk-input govuk-input--width-5" id="name" name="name" type="text">
         </div>
 
         <button class="govuk-button">Save and continue</button>

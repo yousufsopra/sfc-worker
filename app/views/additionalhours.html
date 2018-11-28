@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">{{ data['recordname'] }}</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Job start</li>
+        </ol>
+      </div>
+
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Employment</span>
+          Have they worked any additional hours in the last 7 days?
+      </h1>
+
+      <form class="form" action="/howpaid" method="post">
+        <div class="govuk-form-group">
+
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios" data-module="radios">
+
+                  <div class="govuk-radios govuk-radios--conditional">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="other" name="list" type="radio" value="citizenship" data-aria-controls="conditional-other">
+                      <label class="govuk-label govuk-radios__label" for="other">
+                        Yes
+                      </label>
+                    </div>
+
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="othertext">
+                          Number of hours
+                        </label>
+                        <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text">
+                      </div>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="agency" name="list" type="radio" value="countryofbirth">
+                    <label class="govuk-label govuk-radios__label" for="agency">
+                      No
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+        </div>
+        <button class="govuk-button">Save and continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}
