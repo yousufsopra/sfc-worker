@@ -28,7 +28,7 @@
             <div class="govuk-radios">
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="yes" name="carecertcomp" type="radio" value="apprenticeship">
+                <input class="govuk-radios__input" id="yes" name="carecertcomp" type="radio" value="apprenticeship" checked>
                 <label class="govuk-label govuk-radios__label" for="yes">
                   Yes
                 </label>
@@ -58,22 +58,5 @@
 </div>
 
 <!-- Conditional logic for form -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script language="JavaScript">
-  // Give your submit button an ID
-  $('#submitButton').click(function(event) {
 
-    console.log('Yo');
-
-    event.preventDefault();
-
-    var type = $("#carecertcompform input[name='carecertcomp']:checked").val();
-
-    if (type) {
-        $('#carecertcompform').attr('action', type).submit();
-    } else {
-        return false;
-    }
-  });
-</script>
 {% endblock %}
