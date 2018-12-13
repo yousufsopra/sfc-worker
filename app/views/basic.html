@@ -18,11 +18,10 @@
         </ol>
       </div>
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Identity</span>
-        Enter worker's basic details
+        Create a staff record
       </h1>
 
-      <form class="form" action="jobdate" method="post">
+      <form class="form" action="index" method="post">
 
         <div class="govuk-form-group">
           <div class="govuk-form-group">
@@ -32,7 +31,7 @@
             <span id="national-insurance-number-hint" class="govuk-hint">
               This is for your reference only. We will not share it with anyone else
             </span>
-            <input class="govuk-input govuk-input--width-20" id="recordname" name="recordname" type="text" aria-describedby="national-insurance-number-hint" value="{{ data['recordname'] }}"">
+            <input class="govuk-input govuk-input--width-20" id="recordname" name="recordname" type="text" aria-describedby="national-insurance-number-hint" value="test {{ data['recordname'] }}"">
           </div>
 
           <div class="govuk-form-group">
@@ -40,8 +39,8 @@
               What is their main job role?
             </label>
             <select class="govuk-select" id="jobrole" name="jobrole">
-              <option value="job1" selected>Select job role that applies</option>
-              <option value="job1">Senior care worker</option>
+              <option value="job1" selected>Select job role</option>
+              <option value="Senior care worker" {{ checked("jobrole", "Senior care worker") }}>Senior care worker</option>
               <option value="job2">Care worker</option>
               <option value="job3">Community support and outreach worker</option>
               <option value="job4">Advice guidance and advocacy</option>
@@ -65,32 +64,32 @@
               </legend>
               <div class="govuk-radios" data-module="radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="permanent" name="list" type="radio" value="permanent">
+                  <input class="govuk-radios__input" id="permanent" name="contracttype" type="radio" value="Permanent" {{ checked("contracttype", "Permanent") }}>
                   <label class="govuk-label govuk-radios__label" for="permanent">
                     Permanent
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="temporary" name="list" type="radio" value="temporary">
+                  <input class="govuk-radios__input" id="temporary" name="contracttype" type="radio" value="Temporary" {{ checked("contracttype", "Temporary") }}>
                   <label class="govuk-label govuk-radios__label" for="temporary">
                     Temporary
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="pool-bank" name="list" type="radio" value="pool-bank">
+                  <input class="govuk-radios__input" id="pool-bank" name="contracttype" type="radio" value="Pool or Bank" {{ checked("contracttype", "Pool or Bank") }}>
                   <label class="govuk-label govuk-radios__label" for="pool-bank">
                     Pool/Bank
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="agency" name="list" type="radio" value="agency">
+                  <input class="govuk-radios__input" id="agency" name="contracttype" type="radio" value="Agency" {{ checked("contracttype", "Agency") }}>
                   <label class="govuk-label govuk-radios__label" for="agency">
                     Agency
                   </label>
                 </div>
                 <div class="govuk-radios govuk-radios--conditional">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="other" name="list" type="radio" value="other" data-aria-controls="conditional-other">
+                    <input class="govuk-radios__input" id="other" name="contracttype" type="radio" value="Other" data-aria-controls="conditional-other" {{ checked("contracttype", "Other") }}>
                     <label class="govuk-label govuk-radios__label" for="other">
                       Other
                     </label>

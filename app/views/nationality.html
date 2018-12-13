@@ -14,15 +14,14 @@
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="index">{{ data['recordname'] }}</a>
           </li>
-          <li class="govuk-breadcrumbs__list-item" aria-current="page">Legal status</li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Nationality</li>
         </ol>
       </div>
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Identity</span>
           What is their nationality?
       </h1>
 
-      <form class="form" id="nationality" action="/citizenship" method="post">
+      <form class="form" id="nationality" action="index" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios" data-module="radios">
@@ -42,14 +41,14 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="other" name="list" type="radio" value="citizenship" data-aria-controls="conditional-other">
                   <label class="govuk-label govuk-radios__label" for="other">
-                    Other
+                    Other nationality
                   </label>
                 </div>
 
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="othertext">
-                      Other nationality
+                      Nationality
                     </label>
                     <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text">
                   </div>

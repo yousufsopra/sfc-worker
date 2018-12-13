@@ -1,0 +1,221 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="index">{{ data['recordname'] }}</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Gender</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        Do they have any other job roles?
+      </h1>
+
+      <form class="form" action="index" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <span id="waste-hint" class="govuk-hint">
+                  Select all that apply.
+                </span>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Senior Care Worker
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Care Worker
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Community, Support and Outreach Work
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Employment Support
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Advice, Guidance and Advocacy
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Technician
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Nursing Assistant
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Any childrens/young people's job role
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Other job roles directly involved in providing care
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Senior Management
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Middle Management
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      First Line Manager
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Registered Manager
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Supervisor
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Managers and staff care-related but not care-providing
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Social Worker
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Occupational Therapist
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Registered Nurse
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Allied Health Professional (not Occupational Therapist)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Safeguarding and Reviewing Officer
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Registered Nurse
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Nursing Associate
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Administrative/office staff not care-providing
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Ancillary staff not care-providing
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Activities worker or co-ordinator
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Occupational Therapist Assistant
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Assessment Officer
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                      Care Coordinator
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Care Navigator
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Other job roles not directly involved in providing care
+                    </label>
+                  </div>
+                </div>
+          </fieldset>
+        </div><!--END GOVUK FORMGROUP-->
+        <button class="govuk-button">Save and continue</button>
+      </form>
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+{% endblock %}

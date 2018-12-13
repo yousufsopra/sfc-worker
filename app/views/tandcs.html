@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Terms and conditions
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Using the Adult Social Care Workforce Data Set
+      </h2>
+
+      <p>By using the Adult Social Care Workforce Data Set you agree that Skills for Care can hold and use the data you provide. We use this to report on the social care workforce in England to provide accurate information regarding skills, employment and workforce demographics. Our aim is to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>reduce the number of vacancies and to encourage new entrants</li>
+        <li>improve recruitment and retention</li>
+        <li>increase the numbers of staff with relevant qualifications and skills</li>
+        <li>modernise the workforce</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Storing your data
+      </h2>
+
+      <p>We will store your information in compliance with the principles outlined within the Data Protection Act 1998. Under the Data Protection Act your establishment and Skills for Care are jointly legally responsible for the information submitted by you and stored within the system.</p>
+      <p>Access to information about individual workers is only available to the establishment that has submitted the data and to a small number of key Skills for Care support staff who are responsible for assisting establishments and maintaining the service.</p>
+
+      <h2 class="govuk-heading-m">
+        Disclaimer
+      </h2>
+
+      <p>We accept no responsibility for the quality or integrity of data regarding your establishment held within the service. Responsibility lies solely with the establishment. However as part of our data quality assurance programme we may identify that the Care Quality Commission (CQC) details entered into this service are no longer correct.  These details could be the CQC location ID or your main service does not match to that held on CQC.</p>
+      <p>We will correct any incorrect CQC numbers and/or main service descriptions where we know them to be incorrect. This is to carry out our duty to ensure that information held is accurate given that we transfer data to CQC on your behalf (with your permission).</p>
+
+      <h2 class="govuk-heading-m">
+        Cookies
+      </h2>
+
+      <p>To ensure a secured login and to meet web content accessibility guidelines the service uses two ‘cookies’ (a small file containing letters and numbers we put on your computer). We use a ‘session’ cookie to help us verify that it is you accessing your account and a ‘persistent’ cookie to remember your text size preference.</p>
+      <p>These cookies cannot be used to identify you personally.</p>
+
+      <h2 class="govuk-heading-m">
+        Privacy
+      </h2>
+
+      <p>Login credentials (username and password) are assigned to each user and are therefore the responsibility of the individual. By accepting these terms and conditions you agree to manage your login details securely and not to share your login details with others. We reserve the right to withdraw login details from any user who engages in unauthorised sharing of login details or personal data, personal sensitive data or commercially sensitive information held within the service.</p>
+
+      <!-- END OF YOUR CONTENT -->
+    </div>
+</div>
+
+<!-- Conditional logic for form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="JavaScript">
+  // Give your submit button an ID
+  $('#submitButton').click(function(event) {
+
+    console.log('Yo');
+
+    event.preventDefault();
+
+    var type = $("#zeroform input[name='zerohours']:checked").val();
+
+    if (type) {
+        $('#zeroform').attr('action', type).submit();
+    } else {
+        return false;
+    }
+  });
+</script>
+
+{% endblock %}

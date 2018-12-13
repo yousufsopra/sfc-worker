@@ -18,16 +18,18 @@
         </ol>
       </div>
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Identity</span>
         What is their home postcode?
       </h1>
 
-      <form class="form" action="/gender" method="post">
+      <form class="form" action="index" method="post">
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="name">
+          <label class="govuk-label" for="postcode">
             Postcode
           </label>
+          <span id="postcode-hint" class="govuk-hint">
+            For example, AA10 2BC
+          </span>
           <input class="govuk-input govuk-input--width-10" id="name" name="name" type="text">
         </div>
 

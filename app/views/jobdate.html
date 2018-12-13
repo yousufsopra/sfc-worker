@@ -18,11 +18,10 @@
         </ol>
       </div>
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Identity</span>
         What date did they start this job role?
       </h1>
 
-      <form class="form" action="/ninumber" method="post">
+      <form class="form" action="index" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
@@ -35,7 +34,7 @@
                   <label class="govuk-label govuk-date-input__label" for="dob-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" value="{{ data['dob-day'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
