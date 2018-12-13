@@ -46,11 +46,20 @@
               </div>
               <div class="govuk-radios govuk-radios--conditional">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other" name="list" type="radio" value="other" data-aria-controls="conditional-other">
+                  <input class="govuk-radios__input" id="other" name="list" type="radio" value="citizenship" data-aria-controls="conditional-other">
                   <label class="govuk-label govuk-radios__label" for="other">
-                    Other
+                    Other gender identity
                   </label>
                 </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="othertext">
+                      Gender identity
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text">
+                  </div>
+              </div>
 
             </div>
           </fieldset>
